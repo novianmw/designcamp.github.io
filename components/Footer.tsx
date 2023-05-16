@@ -2,14 +2,16 @@ import Image from "next/image";
 import { logo } from "../public/Assets/list";
 import { RxInstagramLogo, } from "react-icons/rx";
 import { RiTwitterFill, RiYoutubeFill, RiLinkedinFill } from "react-icons/ri"
+import { Poppins } from "next/font/google";
 
+const poppins = Poppins ({weight: "600", subsets: ["latin"]})
 export default function Footer() {
     return (
         <section className="flex flex-row justify-between items-start w-full bg-[#1C2024] p-12">
             <div className="flex flex-col items-start w-[400px]">
                 <div className="flex flex-row items-start">
                     <Image src={logo} alt="logo"/>
-                    <h1 className="font-bold text-[36px] text-white ml-3">
+                    <h1 className={`font-bold text-[36px] text-white ml-3 ${poppins.className}`}>
                         DesignCamp
                     </h1>
                 </div>
@@ -33,7 +35,7 @@ export default function Footer() {
                     </button>
                 </div>
             </div>
-            <div className="flex flex-row items-start justify-center w-full text-white">
+            <div className="flex flex-row items-start justify-center w-full text-white cursor-pointer">
                 <div className="flex flex-col items-start gap-y-6 mx-32">
                     <h1 className="font-bold text-[20px]">
                         Product
@@ -48,7 +50,7 @@ export default function Footer() {
                         Roadmap
                     </p>
                 </div>
-                <div className="flex flex-col items-start gap-y-6 mx-32">
+                <div className="flex flex-col items-start gap-y-6 mx-32 cursor-pointer">
                     <h1 className="font-bold text-[20px]">
                         Company
                     </h1>
@@ -65,7 +67,7 @@ export default function Footer() {
                         Review
                     </p>
                 </div>
-                <div className="flex flex-col items-start gap-y-6 mx-32">
+                <div className="flex flex-col items-start gap-y-6 mx-32 cursor-pointer">
                     <h1 className="font-bold text-[20px]">
                         Legal
                     </h1>
