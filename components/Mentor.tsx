@@ -9,7 +9,7 @@ import { useRef } from "react"
 const slab = Montagu_Slab({ subsets: ["latin"], display: "swap" })
 
 export default function Mentor() {
-    const slider = useRef(null)
+    const slider = useRef<any>(null)
         // const prevSlide = () => {
         //     setCurrentSlide((prev) => (prev === 0 ? mentors.length - 1 : prev - 1))
         // }
