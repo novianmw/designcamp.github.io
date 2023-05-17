@@ -1,35 +1,10 @@
-"use client"
-import { useState } from "react"
 import { questions } from "../constant"
-import { RxPlus, RxCross1 } from "react-icons/rx"
 import { Montagu_Slab } from "next/font/google"
+import ContentToggle from "./ContentToggle"
 
-const slab = Montagu_Slab ({subsets: ["latin"]})
+const slab = Montagu_Slab({ subsets: ["latin"], display: "swap" })
 
-export default function Faq () {
-
-    const [toggle, setToggle] = useState(true)
-    
-    const handleClick = () => {
-        setToggle((prev) => !prev)
-    }
-
-
-    const ListQuestions = ({ask, answer, index }:any) => (
-        <div className="flex flex-col items-start">
-            <div className="flex flex-row justify-between w-full items-center">
-                <h1 className="font-semibold text-[24px] py-5">
-                    {ask}
-                </h1>
-                <button onClick={handleClick} className="flex text-2xl text-slate-500 hover:text-black ">
-                    {toggle ? <RxPlus /> : <RxCross1/>}
-                </button>
-            </div>
-            <p className="font-normal text-[16px] py-5">
-                {answer}
-            </p>
-        </div>
-    )
+export default function  Faq () {
 
     return (
         <section className="flex flex-row items-start w-full py-12 px-6">
@@ -51,9 +26,11 @@ export default function Faq () {
                     </button>
                 </div>
             </div>
-            <div className="flex flex-col items-start gap-5 px-3">
+            <div className="flex flex-col justify-between w-full items-start gap-5 px-3">
                 {questions.map((question, index) =>(
-                    <ListQuestions key={question.id} {...question} />
+                    <div key={index}>
+                        <ContentToggle content={question} {...question} />
+                    </div>
                 ))}
             </div>
         </section>
