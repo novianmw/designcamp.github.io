@@ -1,7 +1,7 @@
 import { RxArrowRight } from "react-icons/rx";
 import { Montagu_Slab } from "next/font/google"
 
-const slab = Montagu_Slab ({subsets: ["latin"]})
+const slab = Montagu_Slab({ subsets: ["latin"], display: "swap" })
 
 export default function Promo() {
     return (

@@ -11,4 +11,5 @@ import Promo from "./Promo"
 import Footer from "./Footer"
 import Footnote from "./Footnote"
 
-export { Navbar, Hero, Stats, Facility, Material, Comparison, Mentor, Faq, Pricing, Promo, Footer, Footnote } 
+
+export { Navbar, Hero, Stats, Facility, Material, Comparison, Mentor, Faq, Pricing, Promo, Footer, Footnote, } 

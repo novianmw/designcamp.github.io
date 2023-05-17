@@ -1,12 +1,17 @@
 "use client"
 import { useState } from "react"
 import Slider from "react-slick"
-import { mentors } from "../constant"
+import { mentors } from "../../constant"
 import Image from "next/image"
 
 
 export default function Mentors_test() {
-
+        // const prevSlide = () => {
+        //     setCurrentSlide((prev) => (prev === 0 ? mentors.length - 1 : prev - 1))
+        // }
+        // const nextSlide = () => {
+        //     setCurrentSlide((prev) => (prev === mentors.length - 1 ? 0 : prev + 1))
+        // }
     const settings = {
         dots: false,
         infinite: true,

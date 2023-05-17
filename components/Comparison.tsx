@@ -3,7 +3,7 @@ import { comparisons } from "../constant"
 import { logo } from "../public/Assets/list"
 import { Montagu_Slab, Poppins } from "next/font/google"
 
-const slab = Montagu_Slab ({subsets: ["latin"]})
+const slab = Montagu_Slab({ subsets: ["latin"], display: "swap" })
 const poppins = Poppins ({weight: "600", subsets: ["latin"]})
 
 export default function Comparison() {

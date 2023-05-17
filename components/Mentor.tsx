@@ -6,7 +6,7 @@ import { Montagu_Slab } from "next/font/google"
 import Slider from "react-slick"
 import { useRef } from "react"
 
-const slab = Montagu_Slab ({subsets: ["latin"]})
+const slab = Montagu_Slab({ subsets: ["latin"], display: "swap" })
 
 export default function Mentor() {
     const slider = useRef(null)
