@@ -17,26 +17,26 @@ export default function Navbar() {
     return (
         <section className="flex flex-col items-start w-full">
             <div className={`${toggle ? "flex" : "hidden"} flex-row justify-center items-center py-4 bg-[#FFA500] w-full`}>
-                <h3 className="font-normal text-center">
+                <h3 className="font-normal text-center text-[12px] sm:text-[16px]">
                     Sign now and get discounts up to 90% off
                 </h3>
-                <button className="absolute right-10 text-2xl text-slate-500 hover:text-black" 
+                <button className="absolute right-10 text-slate-500 text-[16px] sm:text-2xl hover:text-black" 
                     onClick={handleClick} >
                     <RxCross1 />
                 </button>
             </div>
-            <div className="flex flex-row justify-between items-center py-6 px-7 w-full shadow-md">
+            <div className="w-full flex flex-row justify-between items-center shadow-md py-4 px-4 sm:py-6 sm:px-7 ">
                 <div className="flex flex-row justify-start items-center">
-                    <Link href="/" className="flex">
+                    <Link href="/" className="flex w-32 sm:w-full sm:h-full">
                         <Image src={logo} alt="logo"/>
-                        <h1 className={`font-bold text-2xl ml-3 ${poppins.className}`}>
+                        <h1 className={`font-semibold ml-3 text-[16px] sm:text-[24px]  ${poppins.className}`}>
                             DesignCamp
                         </h1>
                     </Link>
                 </div>
                 <div className="flex flex-row justify-end items-center gap-4">
-                    <button className="hover:text-[#FFA500] duration-300 py-4 px-6">Sign in</button>
-                    <button className="py-4 px-6 border rounded-full bg-black text-white hover:bg-[#FFA500] hover:text-black duration-300">Join now</button>
+                    <button className="duration-300 text-[12px] py-2 px-3 sm:text-[16px] sm:py-4 sm:px-6  hover:text-[#FFA500]">Sign in</button>
+                    <button className="border rounded-full bg-black text-white text-[12px] py-2 px-3 sm:text-[16px] sm:py-4 sm:px-6 hover:bg-[#FFA500] hover:text-black duration-300">Join now</button>
                 </div>
             </div>
         </section>
