@@ -8,31 +8,25 @@ const slab = Montagu_Slab({ subsets: ["latin"], display: "swap" })
 
 export default function Facility() {
     return (
-        <section className="flex flex-row gap-16 justify-between items-start py-11 px-12">
-            <div className="flex flex-col items-start gap-5">
-                <h1 className={`font-semibold text-[36px] max-w-[400px] ${slab.className}`}>
+        <section className="flex flex-col justify-center items-start md:flex-row md:justify-between p-12 gap-14">
+            <div className="flex flex-col text-center md:text-left gap-5">
+                <h1 className={`font-semibold text-[36px] ${slab.className}`}>
                     Comprehensive Learning <span className="underline underline-offset-1 decoration-8 decoration-[#FFA500]">Facilities</span>
                 </h1>
-                <div className="flex flex-col items-start gap-3">
+                <div className="flex flex-col justify-center items-center md:items-start w-full py-3 md:py-0 gap-3">
                 {lists.map((list) => (
                     <li key={list.id} className="flex flex-row font-normal text-[16px]">
-                       <RxCheck className="text-[23px] text-[#FFA500]"/>
-                       <p className="font-normal text-[16px] ml-3">
+                       <RxCheck className="flex justify-start items-start text-[23px] text-[#FFA500]"/>
+                       <p className="font-normal ml-3">
                             {list.content}
                        </p>
                     </li>
                 ))}
                 </div>
             </div>
-{/* PR = EDIT LIST BAGIAN POSITION VIDEO */}
-            <div className="flex items-start relative">
-                <div className="ml-32">
+            <div className="flex flex-col justify-center items-center relative">
                     <Image src={videoCover} alt="video" className="w-[600px]"/>
                 </div>
-                <div className="absolute bottom-[120px] right-[250px] border-[#FFA500] rounded-full p-5 bg-[#FFA500] z-10 ">
-                    <Image src={play} alt="play" className="w-[40px]"/>
-                </div>
-            </div>
         </section>
     )
 }
