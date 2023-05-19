@@ -3,7 +3,7 @@ import { useState } from "react"
 import { RxCross1, RxPlus } from "react-icons/rx"
 
 
-export default function ContentToggle({id, ask, answer}:any) {
+export default function ContentToggle({ ask, answer}:any) {
     
     const [isOpen, setIsOpen] = useState(true)
     const handleClick = () => {
