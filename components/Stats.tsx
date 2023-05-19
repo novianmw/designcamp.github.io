@@ -5,18 +5,21 @@ const slab = Montagu_Slab({ subsets: ["latin"], display: "swap" })
 
 export default function Stats() {
     return (
-        <section className="pl-28 flex flex-row justify-center items-center py-10 gap-20 bg-[#1C2024] w-full">
+        <section className="flex flex-row justify-between items-start p-12 bg-[#1C2024] w-full">
             {stats.map((stat, index) => (
-                <div key={stat.id} className="flex flex-col justify-center items-center">
-                    <h3 className={`flex flex-row font-semibold text-[48px] text-center text-white ${slab.className}`}>
-                        {stat.title}
-                        <div className={`-mb-3 mx-12 border  ${index === stats.length - 1? "border-none": "border-r-2"} border-r-2`}></div>
-                    </h3>
-                    <p className="flex mr-24 items-center font-normal text-[16px] text-center text-white">
-                        {stat.content}
-                    </p>
+                <div key={index} className="flex flex-row justify-center text-center items-center">
+                    <div className="flex flex-col justify-center items-center">
+                        <h3 className={`flex font-semibold text-center text-white text-[28px] md:text-[48px] ${slab.className}`}>
+                            {stat.title}
+                        </h3>
+                        <p className="flex items-center justify-start text-white font-normal text-[16px]">
+                            {stat.content}
+                        </p>
+                    </div>
+                    <div className={`flex justify-center items-center p-0 ${index === stats.length - 1? "border-none": "border-r-4 md:p-12"} border-r-4`}></div>
                 </div>
             ))}
+          
         </section>
     )
 }
