@@ -1,5 +1,5 @@
 import { Plus_Jakarta_Sans } from "next/font/google"
-import { Navbar, Hero, Stats, Facility, Material, Comparison, Mentor, Faq, Pricing, Promo, Footer, Footnote } from "../components/list"
+import { Navbar, Hero, Stats, Facility, Material, Comparison, Mentor, Faq, Pricing, Promo, Footer, Footnote, Swiper } from "../components/list"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -14,6 +14,7 @@ export default function Home() {
                 <Stats />
                 <Facility />
                 <Material />
+                <Swiper/>
                 <Comparison />
                 <Mentor />
                 <Faq />
