@@ -1,10 +1,15 @@
+"use client"
 import { RxArrowRight } from "react-icons/rx"
 import { materials } from "../constant"
 import { Montagu_Slab } from "next/font/google"
+import "swiper/css"
+import "swiper/css/navigation"
 
 const slab = Montagu_Slab({ subsets: ["latin"], display: "swap" })
 
 export default function Material() {
+       
+
     const FeedbackCard = ({number, title, content, more }:any) => (
         <div className="flex flex-row items-center border rounded-xl border-[#1C2024] m-5">
             <div className="flex flex-col items-start w-[400px] h-[250px] py-7 px-8 shadow-lg hover:bg-[#1C2024] hover:rounded-xl hover:text-white duration-300">
@@ -28,25 +33,27 @@ export default function Material() {
     )
 
     return (
-        <section className="flex flex-col justify-center items-center py-10">
-            <div className="flex flex-col items-center gap-4">
+        <section className="flex flex-col justify-center items-center w-full p-12">
+            <div className="flex flex-col items-center text-center gap-4">
                 <h1 className={`font-semibold text-[36px] ${slab.className}`}>
                     What Will You <span className="underline underline-offset-1 decoration-8 decoration-[#FFA500]">Learn</span>
                 </h1>
                 <p className="font-normal text-[16px]">
                 Discover what you&apos;ll learn in DesignCamp&apos;s graphic design course, from fundamentals to advanced techniques.
                 </p>
+            </div>
+            <div className="hidden lg:flex flex-col items-center text-center gap-4">
                 <div className="flex flex-row items-center">
-                {materials.slice(0,3).map((item)=> (
-                    <FeedbackCard key={item.number} {...item} />
-                ))}
+                    {materials.slice(0,3).map((item)=> (
+                        <FeedbackCard key={item.number} {...item} />
+                    ))}
+                </div>
+                <div className="hidden lg:flex flex-row items-center">
+                    {materials.slice(3,6).map((item)=> (
+                        <FeedbackCard key={item.number} {...item} />
+                    ))}
+                </div>
             </div>
-            <div className="flex flex-row items-center">
-                {materials.slice(3,6).map((item)=> (
-                    <FeedbackCard key={item.number} {...item} />
-                ))}
-            </div>
-        </div>
-    </section>
-  )
+        </section>
+    )
 }
