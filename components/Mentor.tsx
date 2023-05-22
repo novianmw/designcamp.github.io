@@ -36,10 +36,10 @@ export default function Mentor() {
                     Discover what you&apos;ll learn in DesignCamp&apos;s graphic design course, from fundamentals to advanced techniques.
                 </p>
             </div>
-            <div className="w-full py-12">
+            <div className="w-full p-12">
                 <Slider ref={slider} {...settings}>
                     {mentors.map((mentor) => (
-                        <div key={mentor.id} className="relative flex flex-row justify-center items-center px-12">
+                        <div key={mentor.id} className="flex flex-row justify-center items-center px-12">
                             <div className="flex flex-col justify-center items-center ">
                                 <Image src={mentor.image} alt={mentor.id} />
                             </div>
