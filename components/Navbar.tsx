@@ -25,7 +25,7 @@ export default function Navbar() {
                     <RxCross1 />
                 </button>
             </div>
-            <div className="w-full flex flex-row justify-between items-center shadow-md py-4 px-4 md:py-6 md:px-7 ">
+            <div className="w-full flex flex-row justify-between items-center shadow-md p-4 md:p-6 ">
                 <div className="flex flex-row justify-start items-center">
                     <Link href="/" className="flex w-32 md:w-full md:h-full">
                         <Image src={logo} alt="logo"/>

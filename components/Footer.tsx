@@ -7,7 +7,7 @@ import { Poppins } from "next/font/google";
 const poppins = Poppins ({weight: "600", subsets: ["latin"]})
 export default function Footer() {
     return (
-        <section className="flex flex-row justify-between items-start w-full bg-[#1C2024] p-12">
+        <section className="flex flex-col md:flex-row justify-between items-start w-full bg-[#1C2024] p-12">
             <div className="flex flex-col items-start w-[400px]">
                 <div className="flex flex-row items-start">
                     <Image src={logo} alt="logo"/>
@@ -35,8 +35,8 @@ export default function Footer() {
                     </button>
                 </div>
             </div>
-            <div className="flex flex-row items-start justify-center w-full text-white cursor-pointer">
-                <div className="flex flex-col items-start gap-y-6 mx-32">
+            <div className="flex flex-col md:flex-row items-start justify-around w-3/4 text-white cursor-pointer md:px-12 gap-5">
+                <div className="flex flex-col items-start gap-6 cursor-pointer py-6 md:py-0">
                     <h1 className="font-bold text-[20px]">
                         Product
                     </h1>
@@ -50,7 +50,7 @@ export default function Footer() {
                         Roadmap
                     </p>
                 </div>
-                <div className="flex flex-col items-start gap-y-6 mx-32 cursor-pointer">
+                <div className="flex flex-col items-start gap-6 cursor-pointer py-6 md:py-0">
                     <h1 className="font-bold text-[20px]">
                         Company
                     </h1>
@@ -67,7 +67,7 @@ export default function Footer() {
                         Review
                     </p>
                 </div>
-                <div className="flex flex-col items-start gap-y-6 mx-32 cursor-pointer">
+                <div className="flex flex-col items-start gap-6 cursor-pointer py-6 md:py-0">
                     <h1 className="font-bold text-[20px]">
                         Legal
                     </h1>
