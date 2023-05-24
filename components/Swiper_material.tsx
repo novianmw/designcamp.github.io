@@ -1,10 +1,10 @@
 "use client"
 import { useRef, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import { materials } from "../constant"
 import "swiper/css";
-import "swiper/css/navigation"
+import "swiper/css/pagination"
 
 export default function Swiper_material() {
     return (
@@ -17,7 +17,7 @@ export default function Swiper_material() {
                 pagination={{
                     clickable: true,
                 }}
-                modules={[Navigation]}
+                modules={[Pagination]}
                 breakpoints={{
                     480: {
                         slidesPerView: 1,
@@ -28,10 +28,10 @@ export default function Swiper_material() {
                         spaceBetween: 30
                     },
                 }}
-                className="mySwiper w-full flex justify-center items-center text-center mb-12 ">
+                className="mySwiper w-full flex justify-center items-center text-center mb-12">
                 {materials.map((material) =>(
                     <SwiperSlide key={material.number} className="">
-                        <div className="flex lg:hidden flex-row items-center justify-center border rounded-xl border-[#1C2024] m-5 cursor-pointer">
+                        <div className="flex lg:hidden flex-row items-center justify-center border rounded-xl border-[#1C2024] m-10 cursor-pointer">
                             <div className="flex flex-col items-center w-[400px] h-[250px] py-7 px-8">
                                 <div className="flex flex-row justify-center items-start">
                                     <h1 className="flex justify-center items-center border border-[#FFA500] text-black rounded-lg w-8 h-8 bg-[#FFA500] mr-3">

@@ -10,20 +10,34 @@ const slab = Montagu_Slab({ subsets: ["latin"], display: "swap" })
 
 export default function Mentor() {
     const slider = useRef<any>(null)
-        // const prevSlide = () => {
-        //     setCurrentSlide((prev) => (prev === 0 ? mentors.length - 1 : prev - 1))
-        // }
-        // const nextSlide = () => {
-        //     setCurrentSlide((prev) => (prev === mentors.length - 1 ? 0 : prev + 1))
-        // }
 
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
         arrows: false,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                slidesToShow: 1,
+                }
+            }
+          ]
     }
 
     return (
@@ -58,7 +72,7 @@ export default function Mentor() {
                     ))}
                 </Slider>
             </div>
-            <div className="flex flex-row w-full justify-end gap-3 p-3">
+            <div className="flex flex-row w-full justify-center md:justify-end gap-3 p-3">
                 <button onClick={() => slider.current?.slickPrev() } className="flex justify-center items-center py-4 px-6 border rounded-full hover:bg-[#FFA500] hover:text-black duration-300">
                     <RxArrowLeft className="w-5 h-5"/>
                 </button>
