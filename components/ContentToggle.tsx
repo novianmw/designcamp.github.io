@@ -11,23 +11,22 @@ export default function ContentToggle({ ask, answer}:any) {
 }
 
     return (
-        <div className="flex flex-col items-start">
-            <div className="flex flex-row justify-between w-full items-center">
-                <div className="flex flex-row justify-start items-center">
-                    <h1 className="font-semibold text-[24px] py-5">
+        <div className="flex flex-col justify-start">
+            <div className="flex flex-row justify-between items-center w-full">
+                <div className="flex flex-row justify-start items-center max-w-[200px] md:max-w-[300px] lg:max-w-[500px] xl:max-w-full">
+                    <h1 className="flex w-full items-center font-semibold text-[24px] py-5">
                         {ask}
                     </h1>
                 </div>
                 <div className="flex flex-row justify-end items-center">
-                    <button onClick={handleClick} className="absolute right-10 text-2xl text-slate-500 hover:text-black ">
+                    <button onClick={handleClick} className="text-2xl text-slate-500 hover:text-black ">
                         {isOpen ? <RxPlus /> : <RxCross1/>}
                     </button>
                 </div>
             </div>
-            <p className={`font-normal text-[16px] py-5 ${isOpen ? "hidden" : "block"}`}>
+            <p className={`max-w-[900px] font-normal text-[16px] py-5 ${isOpen ? "hidden" : "block"}`}>
                 {answer}
             </p>
-            <div className="my-5 flex flex-col justify-center items-center w-[950px] border-2 border-[#878787]"></div>
         </div>
     )
 }
