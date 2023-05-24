@@ -7,9 +7,9 @@ const slab = Montagu_Slab({ subsets: ["latin"], display: "swap" })
 export default function  Faq () {
 
     return (
-        <section className="flex flex-col md:flex-row items-start w-full p-12">
-            <div className="flex flex-col items-start w-full max-w-[400px] py-12">
-                <div className="flex flex-col justify-center items-center text-center md:text-left md:justify-start md:items-start py-12 gap-5">
+        <section className="flex flex-col md:flex-row justify-center md:justify-between items-start w-full p-12 gap-10">
+            <div className="flex flex-col justify-center items-center w-full md:max-w-[400px] ">
+                <div className="flex flex-col justify-center items-center text-center md:text-left md:justify-start md:items-start gap-5">
                     <h1 className={`font-semibold text-[36px] ${slab.className}`}>
                         <span className="underline underline-offset-1 decoration-8 decoration-[#FFA500]">Frequently Asked </span>Questions
                     </h1>
@@ -26,10 +26,11 @@ export default function  Faq () {
                     </button>
                 </div>
             </div>
-            <div className="flex flex-col justify-between w-full items-start gap-5 px-3">
+            <div className="flex flex-col justifty-sart items-start w-full px-12">
                 {questions.map((question, index) =>(
                     <div key={index}>
                         <ContentToggle content={question} {...question} />
+                        <div className="my-5 flex flex-col justify-center items-center w-[300px] lg:w-[500px] xl:w-[900px] border-2 border-[#878787]"></div>
                     </div>
                 ))}
                 <div className="flex md:hidden flex-col justify-center items-center w-full gap-5">
