@@ -8,8 +8,8 @@ const poppins = Poppins ({weight: "600", subsets: ["latin"]})
 
 export default function Comparison() {
     return (
-        <section className="flex flex-col items-center bg-[#1C2024] w-full py-12">
-            <div className="flex flex-col items-center gap-3 my-12">
+        <section className="hidden md:flex flex-col items-center bg-[#1C2024] w-full p-12">
+            <div className="flex flex-col items-center gap-3 py-12">
                 <h1 className={`font-semibold text-[36px] text-center text-white ${slab.className}`}>
                     Self Learning vs <span className="text-[#FFA500]">DesignCamp</span>
                 </h1>
@@ -39,7 +39,6 @@ export default function Comparison() {
                         ))}
                     </div>
                 </div>
-{/* CEK SHADOW DROP INTO FULL */}
                 <div className="flex flex-col justify-start items-center border-4 shadow-2xl shadow-[#FFA500] border-[#FFA500] bg-[#5F5F5F]/10 rounded-xl px-4">
                     <div className="flex flex-row py-5">
                         <Image src={logo} alt="logo" />
